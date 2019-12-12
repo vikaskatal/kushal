@@ -301,6 +301,7 @@ p {
 		font-size: 22px;
 	}
 	.myheader__name a {
+    margin-top: 2px;
 		font-size: 13px;
 	}
 	.myheader__social a+a {
