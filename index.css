@@ -163,13 +163,15 @@ p {
 .myheader {
 	display: flex;
 	justify-content: space-between;
-	padding: 38px 0 26px;
+	padding-top: 38px;
+	padding-bottom: 26px;
 	align-items: flex-end;
 }
 
 .myheader a {
 	text-decoration: none;
 	color: #2E384D;
+	display: inline-block;
 }
 
 .myheader a:hover {
@@ -186,6 +188,7 @@ p {
 .myheader__name a {
 	margin-top: 7px;
 	line-height: 1.35;
+	display: inline-block;
 }
 
 .myheader__social a+a {
@@ -199,6 +202,7 @@ p {
 
 .mycontainer--work {
 	max-width: 640px;
+	width: 80%;
 	padding: 0 15px;
 }
 
@@ -234,6 +238,7 @@ p {
 	margin-top: 7px;
 	text-decoration: none;
 	color: #fff;
+	display: inline-block;
 }
 
 .work__title:hover {
@@ -249,18 +254,22 @@ p {
 }
 
 .mycontainer--info {
-	display: flex;
 	max-width: 810px;
+	width: 80%;
+}
+
+.info__flex {
+	display: flex;
 	align-items: flex-end;
 }
 
-.mycontainer--info>div {
+.info__flex>div {
 	flex: 1
 }
 
 .info p {
 	font-size: 15px;
-	line-height: 1.47;
+	line-height: 1.6;
 }
 
 .info p+p {
@@ -281,4 +290,51 @@ p {
 
 .info a+a {
 	margin-top: 7px;
+}
+
+@media only screen and (max-width: 600px) {
+	.myheader {
+		padding-top: 35px;
+		padding-bottom: 20px;
+	}
+	.myheader__name p {
+		font-size: 22px;
+	}
+	.myheader__name a {
+		font-size: 13px;
+	}
+	.myheader__social a+a {
+		margin-left: 15px;
+	}
+	.work {
+		padding: 70px 0;
+	}
+	.work__item {
+		padding: 35px 0;
+	}
+	.work__content {
+		max-width: 180px;
+	}
+	.work__title {
+		font-size: 32px;
+	}
+	.info {
+		padding: 55px 0 75px;
+	}
+	.info__flex {
+		flex-direction: column;
+	}
+	.info__flex>div:first-child {
+		order: 2;
+		margin-top: 40px
+	}
+	.info p {
+		font-size: 14px;
+	}
+	.info p+p {
+		margin-top: 30px;
+	}
+	.info a {
+		font-size: 22px;
+	}
 }
